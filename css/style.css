@@ -1,0 +1,306 @@
+/*------------------------------------------------------------------
+[Table of contents]
+0. Skip
+1. Body
+2. Header
+3. Logo
+4. Navigation
+6. Portfolio List
+7. post container
+9. Footer
+
+-------------------------------------------------------------------*/
+body, html {
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:2%;
+  margin-bottom:10%;
+}
+
+/*------------------------------------------------------------------
+[0. Skip ]
+*/
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+/*------------------------------------------------------------------
+[1. Body ] 
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  color: #3f3f3f;
+  background-color: #ffffff;
+}
+a {
+  color: #33363B;
+}
+
+a:hover {
+  color: #262626;
+}
+
+/*------------------------------------------------------------------
+[2. Header ] 
+*/
+.header {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/*------------------------------------------------------------------
+[3. Logo ] 
+*/
+.logo h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 48px;
+  line-height: 1.42857143;
+  color:#000000;
+}
+/*------------------------------------------------------------------
+[4. Navigation ] 
+*/
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.nav__item {
+  display: inline-block;
+  position: relative;
+  padding: 10px 10px;
+}
+
+.nav__item--active a {
+  color: #FF6D00;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+
+.nav__item:hover{
+  color: #FF6D00;
+  opacity: 0.8;
+  visibility: visible;
+}
+
+
+/*------------------------------------------------------------------
+[6. Portfolio List ] 
+*/
+.portfolio-list{
+  display: flex;
+  justify-content: left;
+  align-content:stretch;   /*come back*/
+  flex-wrap: wrap;
+}
+
+.portfolio-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.portfolio-list__item {
+  margin-bottom: 50px;
+}
+
+.portfolio-list__item-title {
+  margin-top: 5px;
+  text-align: center;
+}
+.portfolio-list__item-title h2 {
+  display: inline;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+
+.portfolio-list .portfolio-list__item {
+  float: left;
+  width: 350px;
+  margin-right: 50px;
+  /*Your code here again.*/
+  display: flex;
+  justify-content: center;
+  align-content:stretch;   /*come back*/
+  flex-wrap: wrap;
+}
+
+.portfolio-list .portfolio-list__item-image {
+  position: relative;
+  width: 350px;
+  height: 233px;
+  display: flex;
+  justify-content: center;
+  align-content:stretch;   /*come back*/
+  flex-wrap: wrap;
+}
+.portfolio-list .portfolio-list__item-image img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transform: translate(-50%, -50%);
+}
+/*------------------------------------------------------------------
+[7. blog ]
+*/
+
+.blogimage{
+  /*Your code here again.*/
+  display: flex;
+  justify-content: left;
+  align-content:stretch;   /*come back*/
+  flex-wrap: wrap;
+}
+
+.blogimage > img{
+  border: 10px #50C7C7 solid;
+  margin: 5px;
+  width: 500px;
+}
+
+/*------------------------------------------------------------------
+[8. aboutme - grid ]
+*/
+
+.aboutme-grid{
+  /*Your Code Here*/
+  display:grid;
+  grid-template-rows:auto auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.aboutcindytext1{
+  grid-column: 1 / span 1;
+}
+
+.aboutcindy-image1{
+  grid-column: 1 / span 2;
+  max-height:500px;
+  overflow:hidden;
+}
+
+.aboutcindy-image1, .aboutcindytext1{
+  /*Your Code Here*/
+  grid-row: 1/auto;
+}
+
+.aboutcindytext2{
+  grid-column: 1 / span 1;
+}
+
+.aboutcindy-image2{
+  grid-column: 1 / span 2;
+  max-height:500px;
+  overflow:hidden;
+}
+
+.aboutcindy-image2, .aboutcindytext2{
+  /*Your Code Here*/
+  grid-row: 2 / auto;
+}
+
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 0px solid black;
+  margin:10px;
+  text-align:center;
+  vertical-align: middle;
+}
+
+@media all and (min-width: 800px){
+
+  .aboutme-grid{
+    /*Your code here:*/
+    grid-template-columns: 375px 375px;
+    grid-template-rows: 500px 500px;
+  }
+
+  .aboutcindytext1{
+    /*Your code here:*/
+    grid-column: 1 / span 1;
+  }
+
+  .aboutcindy-image1{
+    /*Your code here:*/
+    grid-column: 1 / span 2;
+  }
+}
+
+.aboutcindytext2{
+  /*Your code here:*/
+  grid-column: 1 / span 1;
+}
+
+.aboutcindy-image2{
+  /*Your code here:*/
+  grid-column: 1 / span 2;
+}
+
+
+
+/*------------------------------------------------------------------
+[9. Footer ] 
+*/
+
+footer{
+  width:100%;
+  background:#000000;
+  text-align:center;
+  color: #FFFFFF;
+  min-height: 75px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+/*------------------------------------------------------------------*/
+/*Add media query to handle reduced-motion*//*You do not need to modify any code below this line.
+It is included for accessibility to turn off animations
+and movement for people who have modified their
+preferences to reduce motion.*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+  }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
