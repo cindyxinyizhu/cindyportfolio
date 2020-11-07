@@ -228,7 +228,7 @@ a:hover {
 
 .aboutcindy-image2{
   grid-column: 1 / span 2;
-  max-height:500px;
+  max-height:600px;
   overflow:hidden;
 }
 
@@ -250,7 +250,7 @@ a:hover {
   .aboutme-grid{
     /*Your code here:*/
     grid-template-columns: 375px 375px;
-    grid-template-rows: 500px 500px;
+    grid-template-rows: 600px 600px;
   }
 
   .aboutcindytext1{
