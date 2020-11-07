@@ -18,35 +18,26 @@ body, html {
 }
 
 /*------------------------------------------------------------------
-[0. logo ]
+[0. Skip ]
 */
-@-webkit-keyframes logo_wiggle{
-  /*Your code here.  */
-  from {
-    width: 25px;
-  }
-  to {
-    width: 420px;
-  }
-
-
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  /*Your code here*/
+  position: absolute;
+  top: -40px;
 }
 
-@keyframes logo_wiggle{
-  /*Your code here.*/
-  from {
-    width: 25px;
-  }
-  to {
-    width: 420px;
-  }
-
-} 
-
-#logo{
-   /*Your code here.*/
-  animation: logo_wiggle 15s;
+/*Your Code Here*/
+/*Write selector/rule property to position the skip class element*/
+.skip a:focus{
+  top: 0px;
 }
+
 
 /*------------------------------------------------------------------
 [1. Body ] 
@@ -294,24 +285,4 @@ footer{
   bottom: 0;
 }
 
-/*------------------------------------------------------------------*/
-/*Add media query to handle reduced-motion*//*You do not need to modify any code below this line.
-It is included for accessibility to turn off animations
-and movement for people who have modified their
-preferences to reduce motion.*/
 
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-    scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-  }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-}
