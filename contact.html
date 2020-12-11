@@ -42,24 +42,15 @@
             </div>
 
             <div>
-                <p>
-                  <label for="contact-author">Name*</label>
-                  <input id="contact-author" type="text" name="contact-author" size="30" aria-required="true" required>
-                </p>
-
-                <p>
-                  <label for="contact-email">Email*</label>
-                  <input id="contact-email" type="email" name="contact-email" size="30" aria-required="true" required>
-                </p>
-
-                <p>
-                  <label for="contact-message">Message</label>
-                  <textarea id="contact-message" name="contact-message" cols="45" aria-required="true"></textarea>
-                </p>
-
-                <p>
-                  <input id="contact-submit" type="submit" name="contact-submit" size="30" value="Send">
-                </p>
+                <form action="https://formspree.io/f/mzbkjvvz" method="POST">
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Name" aria-label="name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Email" aria-label="email" required>
+                    </div>
+                    <button type='submit' value="send" class="btn">Send</button>
+                </form>
 
             </div>
 
